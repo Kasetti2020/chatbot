@@ -99,94 +99,9 @@ function paintMap() {
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
 	
+        link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><table border=0 cellspacing=0 cellpadding=0><tr><td id=abc class=innertd buttonblock bgcolor=#009DDC style= border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;><a target=_blank class=buttonstyles style= font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; id=abc var= set= href=https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'  conversion=false data-linkto=other>Chat with us</a></td></tr></table></td></tr></table>';
+	
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script> <script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-         embedded_svc.snippetSettingsFile.smallCompanyLogoImgURL = "1.jpg";
-                                                                                                        
-                   
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
-		embedded_svc.settings.defaultMinimizedText = 'Lets Chat'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-        var S = window.location.search; // "?keyword=..." etc.
-           var Email = S.match(/^\?(?:[^\b]*&+)?email=([^&]*)/);//(For get email from URL)
-          if (Email)
-                   Email = Email [1]
-                else
-                     Email  = "no Email found"
-		
-var FirstName= S.match(/^\?(?:[^\b]*&+)?FirstName=([^&]*)/);
-          if (FirstName)
-                   FirstName= FirstName[1].replace('%20', '');
-                else
-                     FirstName= "no FirstName found"
-
-var LaseName= S.match(/^\?(?:[^\b]*&+)?SecondName=([^&]*)/);
-          if (LaseName)
-                   LaseName= LaseName[1]
-                else
-                     LaseName= "no LaseName found"
-
-var Channels= S.match(/^\?(?:[^\b]*&+)?Channel=([^&]*)/);
-          if (Channels)
-                   Channels= Channels[1]
-                else
-                     Channels= "no Channel found"
-
-
-
-     embedded_svc.settings.prepopulatedPrechatFields = {
-                    FirstName: FirstName,
-    LastName: LaseName,
-    Email: Email ,
-    Channel__c: Channels
-
-                              }; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
-
-		embedded_svc.init(
-			'https://qasty-dev-ed.my.salesforce.com',
-			'https://qasty-developer-edition.ap17.force.com/liveAgentSetupFlow',
-			gslbBaseURL,
-			'00D2x000004sKN6',
-			'Search',
-			{
-				baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
-				deploymentId: '5722x0000008ebP',
-				buttonId: '5732x0000008gJc',
-				baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Search',
-				isOfflineSupportEnabled: false
-			}
-		);
-	};
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://qasty-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
-</script> 
 	if (!mapsKey) {
 		return;
 	}
