@@ -98,21 +98,8 @@ function paintMap() {
 	//width = document.getElementById('slider-id-01').value;
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
-	<html>
-<head><meta charset="us-ascii">
-	<title></title>
-</head>
-<body><apex:page> <!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page <!-- End Default Content REMOVE THIS -->
-<style type="text/css">.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
+	
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script> <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
          embedded_svc.snippetSettingsFile.smallCompanyLogoImgURL = "1.jpg";
@@ -199,8 +186,7 @@ var Channels= S.match(/^\?(?:[^\b]*&+)?Channel=([^&]*)/);
 	} else {
 		initESW('https://service.force.com');
 	}
-</script> </apex:page></body>
-</html>
+</script> 
 	if (!mapsKey) {
 		return;
 	}
