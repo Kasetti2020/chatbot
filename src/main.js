@@ -100,7 +100,7 @@ function paintMap() {
 	//zoom = document.getElementById('slider-id-03').value;
 	
 	link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><table border=0 cellspacing=0 cellpadding=0><tr><td id=abc class=innertd buttonblock bgcolor=#009DDC style= border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;><a target=_blank class=buttonstyles style= font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; id=abc var= set= href=https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'  conversion=false data-linkto=other>Chat with us</a></td></tr></table></td></tr></table>';
-
+        button ='<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#009DDC" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;"><a target="_blank" class="buttonstyles" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://techkasetti.com/ChatBotSnapin.html" title="" alias="" conversion="false" data-linkto="https://">Button Text</a></td></tr></table></td></tr></table>'
 
 
 	if (!mapsKey) {
@@ -109,7 +109,7 @@ function paintMap() {
 	/*var url = 'https://maps.googleapis.com/maps/api/staticmap?center=' +
 		address.split(' ').join('+') + '&size=' + width + 'x' + height + '&zoom=' + zoom +
 		'&markers=' + address.split(' ').join('+') + '&key=' + mapsKey;*/
-	sdk.setContent(link);
+	sdk.setContent(button);
 	sdk.setData({
 		mapsKey: mapsKey
 	});
