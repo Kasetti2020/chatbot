@@ -94,44 +94,29 @@ function paintMap() {
 	console.log('2');
 	mapsKey = document.getElementById('text-input-id-0').value;
 	console.log('mapsKey'+mapsKey);
-	//address = document.getElementById('text-input-id-1').value;
-	//width = document.getElementById('slider-id-01').value;
-	//height = document.getElementById('slider-id-02').value;
-	//zoom = document.getElementById('slider-id-03').value;
 	
-	link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><table border=0 cellspacing=0 cellpadding=0><tr><td id=abc class=innertd buttonblock bgcolor=#009DDC style= border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;><a target=_blank class=buttonstyles style= font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; id=abc var= set= href=https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'  conversion=false data-linkto=other>Chat with us</a></td></tr></table></td></tr></table>';
-        button ='<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#009DDC" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;"><a target="_blank" class="buttonstyles" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'" title="" alias="" conversion="false" data-linkto="https://">Chat with us</a></td></tr></table></td></tr></table>'
+	 button ='<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#009DDC" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;"><a target="_blank" class="buttonstyles" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'" title="" alias="" conversion="false" data-linkto="https://">Chat with us</a></td></tr></table></td></tr></table>'
 
 
 	if (!mapsKey) {
 		return;
 	}
-	/*var url = 'https://maps.googleapis.com/maps/api/staticmap?center=' +
-		address.split(' ').join('+') + '&size=' + width + 'x' + height + '&zoom=' + zoom +
-		'&markers=' + address.split(' ').join('+') + '&key=' + mapsKey;*/
 	sdk.setContent(button);
 	sdk.setData({
 		mapsKey: mapsKey
 	});
-	//localStorage.setItem('googlemapsapikeyforblock', mapsKey);
-
+	
 }
 
 sdk.getData(function (data) {
 	
 	mapsKey = data.mapsKey;
 	console.log('mapsKey'+mapsKey);
-	//paintSettings();
-	//paintSliderValues();
 	paintMap();
 	debounce(paintMap, 500)();
 });
 
-/*document.getElementById('workspace').addEventListener("input", function () {
-	console.log('3');
-	debounce(paintMap, 500)();
-	//paintSliderValues();
-});*/
+
 
 /***/ }),
 /* 1 */
