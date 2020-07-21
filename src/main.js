@@ -98,24 +98,10 @@ function paintMap() {
 	//width = document.getElementById('slider-id-01').value;
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
-	<style>
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button1 {background-color: #4CAF50;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
-</style>
-        link = '<button class="button button1">Chat with us</button> href=https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'  conversion=false data-linkto=other>';
 	
+	link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><table border=0 cellspacing=0 cellpadding=0><tr><td id=abc class=innertd buttonblock bgcolor=#009DDC style= border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #009DDC;><a target=_blank class=buttonstyles style= font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #009DDC; border: 1px solid #009DDC; padding: 10px; border-radius: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; id=abc var= set= href=https://techkasetti.com/Kchat.html?FirstName=%%First Name%%&SecondName=%%Second Name%%&email=%%email%%&Channel='+mapsKey+'  conversion=false data-linkto=other>Chat with us</a></td></tr></table></td></tr></table>';
+	
+
 
 	if (!mapsKey) {
 		return;
